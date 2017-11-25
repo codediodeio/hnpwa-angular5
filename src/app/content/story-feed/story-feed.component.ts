@@ -8,7 +8,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 // import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-feed',
+  selector: 'story-feed',
   templateUrl: './story-feed.component.html',
   styleUrls: ['./story-feed.component.css']
 })
@@ -34,10 +34,10 @@ export class StoryFeedComponent implements OnInit {
       return this.data.getFeed(data.feed);
     });
 
-    this.pages$ = this.story-feed.map(arr => Math.floor(arr.length / 30) + 1);
+    this.pages$ = this.feed.map(arr => Math.floor(arr.length / 30) + 1);
 
     this.items$ = this.currentPage$.switchMap(page => {
-      return this.story-feed.map(items => items.slice((page - 1) * 30, (page - 1) * 30 + 30));
+      return this.feed.map(items => items.slice((page - 1) * 30, (page - 1) * 30 + 30));
     });
 
 
