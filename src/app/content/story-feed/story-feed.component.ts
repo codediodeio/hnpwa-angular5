@@ -5,7 +5,6 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
 
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-// import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'story-feed',

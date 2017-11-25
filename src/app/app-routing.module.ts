@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 
 
 const routes: Routes = [
-  // { path: '', redirectTo: 'hn/top', pathMatch: 'full' },
+  { path: '', redirectTo: 'hn/top', pathMatch: 'full' },
   { path: 'hn', loadChildren: './content/content.module#ContentModule'},
 ];
 
