@@ -1,0 +1,21 @@
+footer { 
+    min-height: 250px; 
+    background: #f8f9fa; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+    text-align: center;
+}
+
+.btn-primary { margin-left: 5px; }
+
+.interactive { 
+    min-height: 250px; 
+    background: #fff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+    text-align: center;
+}

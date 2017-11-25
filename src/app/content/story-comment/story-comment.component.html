@@ -1,0 +1,35 @@
+
+
+<div *ngIf="comment$ | async as comment" class="comment">
+<!-- <p>{{ comment.by }} {{ comment.time | date: 'short' }}</p>
+
+<div [innerHtml]="comment.text"></div>
+
+<hr>
+
+    <div *ngFor="let kid of comment?.kids">
+        <story-comment [commentId]="kid"></story-comment>
+    </div> -->
+
+    <div class="tile">
+        <div class="tile-icon">
+            <i class="icon icon-more-horiz"></i>
+        </div>
+        <div class="tile-content">
+            <p class="tile-title text-gray">
+                <a [routerLink]="['/hn/user', comment.by]">{{ comment.by }}</a> 
+                {{ comment.time | date: 'short' }}</p>
+            <div class="tile-subtitle" [innerHtml]="comment.text"></div>
+        </div>
+    </div>
+
+
+    <div *ngFor="let kid of comment?.kids">
+        <story-comment [commentId]="kid"></story-comment>
+    </div>
+
+
+
+</div>
+
+

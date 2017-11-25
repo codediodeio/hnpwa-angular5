@@ -1,0 +1,16 @@
+<div *ngIf="item$ | async as item" class="item">
+  
+    <h3>{{ item.title }}</h3>
+    <p>
+      {{ item.score }} points by 
+      
+      <a [routerLink]="['/hn/user', item.by]">{{ item.by }}</a> 
+      
+      | {{ item?.kids?.length }} comments
+    </p>
+  
+    <ng-container *ngFor="let id of item.kids">
+      <story-comment [commentId]="id"></story-comment>
+    </ng-container>
+
+</div>

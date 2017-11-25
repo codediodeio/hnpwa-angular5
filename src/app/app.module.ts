@@ -8,16 +8,23 @@ import { AppComponent } from './app.component';
 
 import { environment } from '../environments/environment';
 
+import { UiModule } from './ui/ui.module';
+// import { ContentModule } from './content/content.module';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
+    UiModule,
+    // ContentModule,
+    environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : [],
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: []
 })
 export class AppModule { }

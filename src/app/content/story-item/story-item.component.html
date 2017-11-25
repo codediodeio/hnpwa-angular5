@@ -1,0 +1,48 @@
+<div *ngIf="item$ | async as item" class="columns item">
+
+  <div class="columns col-3 score">
+      {{ item.score }} 
+  </div>
+
+  <div class="columns col-9 link">
+
+      <a *ngIf="item.url" 
+         [href]="item.url" target="_blank" rel="noopener" class="main-link">{{ item.title }}</a>
+
+      <a *ngIf="!item.url" 
+         [routerLink]="['/hn/item', item.id]" class="main-link">{{ item.title }}</a>
+
+
+
+      <p class="sub-links">
+        by <a [routerLink]="['/hn/user', item.by]">{{ item.by }}</a> 
+         | <a [routerLink]="['/hn/item', item.id]" class="badge" [attr.data-badge]="item?.kids?.length || 0"> 
+          comments
+        </a>
+
+      </p>
+    
+  </div>
+
+</div>
+
+
+<!-- <div *ngIf="itemId === 'preload'" class="columns item">
+    
+      <div class="columns col-3 score">
+          {{ preload.points }}
+      </div>
+    
+      <div class="columns col-9 link">
+    
+          <a href="#" target="_blank" rel="noopener" class="main-link">{{ preload.title }}</a>
+
+          <p class="sub-links">
+              by <a [routerLink]="['/hn/user', preload.user || '']">{{ preload.user }}</a> 
+               | <a [routerLink]="['/hn/item', preload.id || '']" class="badge" [attr.data-badge]="preload.comment_count || 0"> 
+                comments
+              </a>
+          </p>
+      </div>
+    
+</div> -->

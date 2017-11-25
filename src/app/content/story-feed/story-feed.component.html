@@ -1,0 +1,45 @@
+
+<div *ngIf="pages$ | async as pages; else loading;" class="paginate">
+
+  <div *ngIf="currentPage$ | async as page">
+
+    <button (click)="prevPage()" class="btn" [disabled]="page === 1"><i class="icon icon-back"></i> Prev</button> 
+      <span class="pages">{{ page }} of {{ pages }}</span>
+    <button (click)="nextPage()" class="btn" [disabled]="page === pages">Next <i class="icon icon-forward"></i></button>
+
+  </div>
+
+
+
+</div>
+
+
+
+<div *ngFor="let id of items$ | async">
+  <story-item [itemId]="id"></story-item>
+</div>
+
+  <!-- <div *ngFor="let x of preload | async">
+      <story-item [itemId]="'preload'" [preload]="x"></story-item>
+  </div> -->
+
+
+
+<ng-template #loading>
+
+  <div class="paginate"><span class="pages">Just a sec...</span></div>
+
+  <!-- <div *ngFor="let _ of [1,2,3,4,5,6,7]">
+      <story-item [itemId]="'preload'"></story-item>
+  </div> -->
+
+  <!-- <div *ngFor="let x of preload | async">
+      <story-item [itemId]="'preload'" [preload]="x"></story-item>
+  </div> -->
+
+
+
+  <loading-spinner></loading-spinner>
+
+
+</ng-template>

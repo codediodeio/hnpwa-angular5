@@ -1,0 +1,9 @@
+<div *ngIf="user$ | async as user" class="user">
+    
+      <h2>{{ user.id }}</h2>
+      <ul>
+          <li>Joined {{ user.created * 1000 | date: 'short' }}</li>
+          <li>Karma <span class="badge" [attr.data-badge]="user.karma || 0"></span></li>
+      </ul>
+
+ </div>

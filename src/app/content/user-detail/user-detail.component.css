@@ -1,0 +1,9 @@
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #f8f9fa;
+    min-height: 5em;
+    padding: 3em;
+}
