@@ -23,8 +23,6 @@ import { UiModule } from './ui/ui.module';
     // ContentModule,
     environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : [],
   ],
-  providers: [],
   bootstrap: [AppComponent],
-  exports: []
 })
 export class AppModule { }

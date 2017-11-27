@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 pill.css
+/functions/node_modules
 
 # dependencies
 /node_modules
