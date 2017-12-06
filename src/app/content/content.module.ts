@@ -12,7 +12,6 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { DataService } from './data.service';
-import { HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
@@ -32,7 +31,6 @@ const routes: Routes = [
   imports: [
     CommonModule,
     UiModule,
-    HttpClientModule,
     RouterModule.forChild(routes),
     AngularFireModule.initializeApp({ databaseURL: 'https://hacker-news.firebaseio.com'}),
     AngularFireDatabaseModule

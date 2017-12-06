@@ -1,5 +1,7 @@
 # HNPWA Angular 5.0
 
+Watch the [Angular 5 Service Worker screencast](https://angularfirebase.com/lessons/hnpwa-angular-5-progressive-web-app-service-worker-tutorial/). 
+
 A realtime Hacker News Progressive Web App using: 
 
 - Angular 5.0 
